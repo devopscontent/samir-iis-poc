@@ -1,4 +1,4 @@
-name: Test Self-Hosted Runner
+name: Test Self-Hosted Runner (Safe)
 
 on:
   push:
@@ -10,13 +10,12 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Print basic info
+      - name: Basic PowerShell Test
         shell: powershell
         run: |
-          Write-Host "Hello from Samir's PC 🚀"
-          Write-Host "Computer Name:"
-          hostname
-          Write-Host "Current User:"
-          whoami
-          Write-Host "Current Directory:"
-          pwd
+          Write-Host "Hello from Samir's PC"
+          Write-Host "Runner is executing PowerShell successfully"
+          Write-Host "Current directory:"
+          Get-Location
+          Write-Host "Listing files:"
+          Get-ChildItem
