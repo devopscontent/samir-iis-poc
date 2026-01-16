@@ -1,0 +1,22 @@
+name: Test Self-Hosted Runner
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Print basic info
+        shell: powershell
+        run: |
+          Write-Host "Hello from Samir's PC 🚀"
+          Write-Host "Computer Name:"
+          hostname
+          Write-Host "Current User:"
+          whoami
+          Write-Host "Current Directory:"
+          pwd
