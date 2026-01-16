@@ -1,4 +1,4 @@
-# samir-iis-poc
+# samir-iis-pocs
 
 POC project to learn:
 - IIS
